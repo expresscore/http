@@ -1,0 +1,42 @@
+{
+	"name": "expresscore/http",
+	"license": "MIT",
+	"description": "",
+	"repositories": [
+		{
+			"type": "vcs",
+			"url": "https://github.com/expresscore/router.git"
+		},
+		{
+			"type": "vcs",
+			"url": "https://github.com/expresscore/session.git"
+		}
+	],
+	"require": {
+		"php": ">=8.1",
+		"phpunit/phpunit": "9.5.*",
+		"symfony/var-dumper": "5.3.*",
+		"expresscore/router": "1.0.*",
+		"expresscore/session": "1.0.*",
+		"incenteev/composer-parameter-handler": "2.1.*"
+	},
+	"scripts": {
+		"post-install-cmd": [
+			"expresscore\\http\\InstallService::install"
+		]
+	},
+	"keywords": ["http", "protocol", "router"],
+	"homepage": "https://devsprint.pl",
+	"authors": [
+		{
+			"name": "Marcin Stodulski",
+			"homepage": "https://devsprint.pl",
+			"role": "Developer"
+		}
+	],
+	"autoload": {
+		"psr-4": {
+			"expresscore\\http\\": "src"
+		}
+	}
+}
